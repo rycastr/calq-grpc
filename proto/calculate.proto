@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package calq;
+
+service Calculate {
+    rpc Sum(CalculateRequest) returns (CalculateReply) {}
+    rpc Multiply(CalculateRequest) returns (CalculateReply) {}
+}
+
+message CalculateRequest {
+    int32 left = 1;
+    int32 right = 2;
+}
+
+message CalculateReply {
+    int32 result = 1;
+}
